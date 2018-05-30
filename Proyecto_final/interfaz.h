@@ -35,7 +35,7 @@ private slots:
 
 private:
     Ui::interfaz *ui;
-    QMediaPlayer *mMediaPlayer;
+
 };
 
 #endif // INTERFAZ_H

@@ -2,6 +2,9 @@
 #include "ui_interfaz.h"
 #include <QMediaPlayer>
 #include <QFileDialog>
+#include <iostream>
+
+using namespace std;
 
 
 interfaz::interfaz(QWidget *parent) :
@@ -9,8 +12,10 @@ interfaz::interfaz(QWidget *parent) :
     ui(new Ui::interfaz)
 {
     ui->setupUi(this);
-    mMediaPlayer = new QMediaPlayer(this);
-
+    QMediaPlayer *musica = new QMediaPlayer();
+    musica->setMedia(QUrl(":/Down Whit The Sickness.mp3"));
+    musica->play();
+    //cout<<"esto se fue a la verga"<<endl;
 }
 
 interfaz::~interfaz()
@@ -50,11 +55,5 @@ void interfaz::on_pushButton_3_clicked()
 
 void interfaz::on_pushButton_clicked()
 {
-    QString filename= QFileDialog::getOpenFileName(this,"Abrir");
-    if(filename.isEmpty()){
-        return;
-    }
-    mMediaPlayer->setMedia(QUrl::fromLocalFile(filename));
-    //on_play_clicked();
-    mMediaPlayer->play();
+
 }
