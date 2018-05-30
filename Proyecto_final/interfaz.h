@@ -2,6 +2,7 @@
 #define INTERFAZ_H
 
 #include <QMainWindow>
+#include <QTimer>
 
 
 namespace Ui {
@@ -16,6 +17,7 @@ public:
     explicit interfaz(QWidget *parent = 0);
 
     ~interfaz();
+    QTimer *timer;
 
 
 private slots:

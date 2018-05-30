@@ -26,13 +26,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        interfaz.cpp
+        interfaz.cpp \
+    form.cpp \
+    personaje.cpp \
+    esmad.cpp \
+    objetos.cpp \
+    datos.cpp
 
 HEADERS += \
-        interfaz.h
+        interfaz.h \
+    form.h \
+    personaje.h \
+    esmad.h \
+    objetos.h \
+    datos.h
 
 FORMS += \
-        interfaz.ui
+        interfaz.ui \
+    form.ui
 
 RESOURCES += \
     imagenes.qrc \
